@@ -28,11 +28,16 @@ class Hosts {
      * @returns {any}
      */
     get(hostname = null) {
-        return (hostname)
-            ? this._hosts.filter(function (item) {
+        let result = [];
+        if (hostname) {
+            let items = this._hosts.filter(function (item) {
                 return (item['name'] === hostname)
-            })
-            : this._hosts;
+            });
+            if (items.length > 0) result = items[0];
+        } else {
+            result = this._hosts
+        }
+        return result;
     }
 
     /**

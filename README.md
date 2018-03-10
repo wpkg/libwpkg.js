@@ -10,13 +10,16 @@ How to import and work with `Hosts` object:
 
 ```js
 // Enable module
-let Hosts = require("libwpkg");
+let wpkg = require("libwpkg");
 
 // Import XML file
-let hosts = Hosts.import(__dirname + '/hosts.xml');
+let hosts = wpkg.hosts.import(__dirname + '/extra/hosts.xml');
+
+// Get all hosts
+let hosts_all = hosts.get();
+console.log(hosts_all);
 
 // Get single host by hostname
-let host = hosts.get('host1');
-
-console.log(host);
+let host_single = hosts.get('host2');
+console.log(host_single);
 ```
