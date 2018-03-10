@@ -1,6 +1,6 @@
 # libWPKG.js - NodeJS module
 
-    npm install --save libwpkg.js
+    npm install --save libwpkg
 
 ### Hosts
 
