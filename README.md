@@ -13,13 +13,13 @@ How to import and work with `Hosts` object:
 let wpkg = require("libwpkg");
 
 // Import XML file
-let hosts = wpkg.hosts.import(__dirname + '/extra/hosts.xml');
+wpkg.hosts.import(__dirname + '/extra/hosts.xml');
 
 // Get all hosts
-let hosts_all = hosts.get();
+let hosts_all = wpkg.hosts.get();
 console.log(hosts_all);
 
 // Get single host by hostname
-let host_single = hosts.get('host2');
+let host_single = wpkg.hosts.get('host2');
 console.log(host_single);
 ```
