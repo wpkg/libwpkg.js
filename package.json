@@ -1,6 +1,8 @@
 {
   "name": "libwpkg.js",
   "author": "Paul Rock <paul@drtema.rocks>",
+  "description": "JavaScript library for work with WPKG XML configuration files",
+  "repository": "git@github.com:wpkg/libwpkg.js.git",
   "license": "MIT",
   "version": "0.0.1",
   "dependencies": {

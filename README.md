@@ -1,11 +1,21 @@
-Example of Hosts XML file is here.
+# libWPKG.js - NodeJS module
 
-How to import and start work with `Hosts` object:
+    npm install --save libwpkg.js
+
+### Hosts
+
+Example of Hosts XML file is [here](extra/hosts.xml).
+
+How to import and work with `Hosts` object:
 
 ```js
-let Hosts = require("./src/Hosts");
+// Enable module
+let Hosts = require("libwpkg");
 
+// Import XML file
 let hosts = Hosts.import(__dirname + '/hosts.xml');
+
+// Get single host by hostname
 let host = hosts.get('host1');
 
 console.log(host);
