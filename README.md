@@ -1,6 +1,12 @@
-# libWPKG.js - NodeJS module
+# libWPKG.js - JavaScript library
+
+Small library for work with WPKG XML configuration files.
 
     npm install --save libwpkg
+
+## Small how to
+
+More examples here.
 
 ### Hosts
 
@@ -23,3 +29,5 @@ console.log(hosts_all);
 let host_single = wpkg.hosts.get('host2');
 console.log(host_single);
 ```
+
+# Links
