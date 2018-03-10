@@ -1,0 +1,9 @@
+{
+  "name": "libwpkg.js",
+  "author": "Paul Rock <paul@drtema.rocks>",
+  "license": "MIT",
+  "version": "0.0.1",
+  "dependencies": {
+    "node-xml-lite": "0.0.7"
+  }
+}
