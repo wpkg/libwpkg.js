@@ -30,4 +30,13 @@ let host_single = wpkg.hosts.get('host2');
 console.log(host_single);
 ```
 
-# Links
+# Get Support!
+
+* [Discord](https://discord.gg/vRjVfHK) - Join us on Discord.
+* [GitHub Issues](https://github.com/wpkg/libwpkg.js/issues) - Got issues? Please tell us!
+
+# Some links
+
+* Main the WPKG website - https://wpkg.org/
+* WPKG documentation page - https://wpkg.org/Documentation
+* Article on Wikipedia - https://en.wikipedia.org/wiki/WPKG_(software)
