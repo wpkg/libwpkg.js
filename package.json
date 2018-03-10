@@ -4,7 +4,7 @@
   "description": "JavaScript library for work with WPKG XML configuration files",
   "repository": "https://github.com/wpkg/libwpkg.js.git",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "ecmascript6",
     "javascript-library",
