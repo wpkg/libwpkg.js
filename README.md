@@ -8,6 +8,11 @@ Small library for work with WPKG XML configuration files.
 
 More examples here.
 
+```js
+// Enable WPKG module
+let wpkg = require("libwpkg");
+```
+
 ### Hosts
 
 Example of Hosts XML file is [here](extra/hosts.xml).
@@ -15,9 +20,6 @@ Example of Hosts XML file is [here](extra/hosts.xml).
 How to import and work with `Hosts` object:
 
 ```js
-// Enable module
-let wpkg = require("libwpkg");
-
 // Import XML file
 wpkg.hosts.import(__dirname + '/extra/hosts.xml');
 
@@ -28,6 +30,22 @@ console.log(hosts_all);
 // Get single host by hostname
 let host_single = wpkg.hosts.get('host2');
 console.log(host_single);
+```
+
+### Profiles
+
+Example of Profiles XML file is [here](extra/profiles.xml).
+
+How to import and work with `Profiles` object:
+
+```js
+wpkg.profiles.import(__dirname + '/extra/profiles.xml');
+
+let profiles_all = wpkg.profiles.get();
+console.log(profiles_all);
+
+let profile_single = wpkg.profiles.get('profile3');
+console.log(profile_single);
 ```
 
 # Get Support!
