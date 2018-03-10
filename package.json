@@ -2,10 +2,21 @@
   "name": "libwpkg.js",
   "author": "Paul Rock <paul@drtema.rocks>",
   "description": "JavaScript library for work with WPKG XML configuration files",
-  "repository": "git@github.com:wpkg/libwpkg.js.git",
+  "repository": "https://github.com/wpkg/libwpkg.js.git",
   "license": "MIT",
   "version": "0.0.1",
+  "keywords": [
+    "ecmascript6",
+    "javascript-library",
+    "wpkg",
+    "node-module",
+    "xml"
+  ],
   "dependencies": {
     "node-xml-lite": "0.0.7"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/wpkg/libwpkg.js/issues"
+  },
+  "homepage": "https://github.com/wpkg/libwpkg.js"
 }
