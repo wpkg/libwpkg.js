@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wpkg.org/packages xsd/packages.xsd">
+  <package id="time" name="Time Synchronization" priority="100" execute="always">
+    <check type="host" condition="os" path="windows 7"/>
+    <commands>
+      <command type="install" cmd='net time \timeserver /set /yes'/>
+    </commands>
+  </package>
+  <package id="wpkg" name="Windows Packager sample 1" revision="1" priority="0" reboot="false">
+    <check type="registry" condition="exists" path="HKLM\Software\wpkg\full\key\not\part\of\it"/>
+    <check type="file" condition="exists" path="C:\wpkg\wpkg.bat"/>
+    <check type="uninstall" condition="exists" path="WPKG 0.6-test1"/>
+    <commands>
+      <command type="install" cmd='msiexec /i /qn "%SOFTWARE%\path\to\msi"' include="test">
+        <exit code="0"/>
+        <exit code="3010" reboot="true"/>
+        <exit code="any"/>
+        <exit code="2"/>
+      </command>
+      <command type="remove" cmd='msiexec /x /qn "%SOFTWARE%\path\to\msi"'/>
+      <command type="upgrade" cmd='msiexec /i /qn "%SOFTWARE%\path\to\msi"'/>
+      <command type="downgrade" include="remove"/>
+      <command type="downgrade" include="install"/>
+    </commands>
+  </package>
+  <package id="time3" name="Time Synchronization" priority="100" execute="always">
+    <check type="host" condition="os" path="windows 7"/>
+    <commands>
+      <command type="install" cmd='net time \timeserver /set /yes'/>
+    </commands>
+  </package>
+</packages:packages>

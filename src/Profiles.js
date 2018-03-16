@@ -7,29 +7,29 @@ class Profiles {
     }
 
     /**
-     * Generate array with profiles from xml
+     * Generate array with data from xml
      *
      * @param {string} filename
      * @returns {Profiles}
      */
     import(filename) {
         // Get array which was created from XML
-        let hostsXml = config.get(filename);
+        let xml = config.get(filename);
 
-        // Parse XML's array to hosts array
-        this.parse(hostsXml);
+        // Parse XML's array to data array
+        this.parse(xml);
 
         return this;
     }
 
     /**
-     * Extract items from profiels array
+     * Extract items from array
      *
      * @param {string} type
      * @param {array} array
      * @returns {Array}
      */
-    parseChilds(type, array) {
+    parseItems(type, array) {
 
         let items = array.filter(function (item) {
             return (item['name'] === type)
@@ -69,8 +69,8 @@ class Profiles {
 
                 // Set packages and depended profiles
                 if (item.childs) {
-                    result.packages = this.parseChilds('package', item.childs);
-                    result.depends = this.parseChilds('depends', item.childs);
+                    result.packages = this.parseItems('package', item.childs);
+                    result.depends = this.parseItems('depends', item.childs);
                 }
 
                 // Put item into the local array
@@ -101,12 +101,12 @@ class Profiles {
     }
 
     /**
-     * Add host into the array of hosts
+     * Add item into the array of items
      *
-     * @param {array} profile - Array with data about profile
+     * @param {array} item - Array with data about item
      */
-    set(profile) {
-        this._profiles.push(profile);
+    set(item) {
+        this._profiles.push(item);
     }
 
 }

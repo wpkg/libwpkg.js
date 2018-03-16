@@ -7,16 +7,17 @@ class Hosts {
     }
 
     /**
-     * Generate array with hosts from xml
+     * Generate array with data from xml
      *
-     * @param filename
-     * @returns {Hosts}
+     * @param {string} filename
+     * @returns {Profiles}
      */
     import(filename) {
         // Get array which was created from XML
-        let hostsXml = config.get(filename);
-        // Parse XML's array to hosts array
-        this.parse(hostsXml);
+        let xml = config.get(filename);
+
+        // Parse XML's array to data array
+        this.parse(xml);
 
         return this;
     }
@@ -42,12 +43,12 @@ class Hosts {
     }
 
     /**
-     * Add host into the array of hosts
+     * Add item into the array of items
      *
-     * @param {array} host - Array with data about host
+     * @param {array} item - Array with data about item
      */
-    set(host) {
-        this._hosts.push(host);
+    set(item) {
+        this._hosts.push(item);
     }
 
     /**
