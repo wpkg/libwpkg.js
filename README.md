@@ -48,6 +48,29 @@ let profile_single = wpkg.profiles.get('profile3');
 console.log(profile_single);
 ```
 
+### Packages
+
+Example of Profiles XML file is [here](extra/packages.xml).
+
+How to import and work with `Packages` object:
+
+```js
+wpkg.packages.import(__dirname + '/extra/packages.xml');
+
+let packages_all = wpkg.packages.get();
+console.log(packages_all);
+
+let package_single = wpkg.packages.get('wpkg');
+console.log(package_single);
+
+// Show packages commands
+console.log(package_single.commands);
+for (let command of package_single.commands) {
+    // Show single command
+    console.log(command);
+}
+```
+
 # Get Support!
 
 * [Discord](https://discord.gg/vRjVfHK) - Join us on Discord.
